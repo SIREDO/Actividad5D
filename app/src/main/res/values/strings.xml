@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Actividad5D</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_crear_evento">CrearEvento</string>
+    <string name="title_activity_mostrar_evento">MostrarEvento</string>
+</resources>
