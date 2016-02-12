@@ -65,10 +65,10 @@ public class CrearEvento extends Activity {
                 long startMillis = 0;
                 long endMillis = 0;
                 Calendar beginTime = Calendar.getInstance();
-                beginTime.set(any, mes,dia, 7, 30);
+                beginTime.set(any, mes,dia, 00, 00);
                 startMillis = beginTime.getTimeInMillis();
                 Calendar endTime = Calendar.getInstance();
-                endTime.set(any,mes, dia, 8, 45);
+                endTime.set(any,mes, dia + 1, 00, 00);
                 endMillis = endTime.getTimeInMillis();
 
 
@@ -78,7 +78,6 @@ public class CrearEvento extends Activity {
                 values.put(CalendarContract.Events.TITLE, titulo.getText().toString());
                 values.put(CalendarContract.Events.DESCRIPTION, descripcion.getText().toString());
                 values.put(CalendarContract.Events.EVENT_TIMEZONE, TimeZone.getDefault().getID());
-                //values.put (CalendarContract.Events.ALL_DAY, 1);
 
                cr.insert (CalendarContract.Events.CONTENT_URI, values);
 

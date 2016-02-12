@@ -17,7 +17,9 @@ import android.widget.CalendarView;
 import android.widget.Toast;
 
 import java.util.Date;
-
+/*
+    SILVIA REOLID
+ */
 public class MainActivity extends Activity {
     private CalendarView calen;
     private int dia, mes, any;
@@ -39,7 +41,7 @@ public class MainActivity extends Activity {
             }
         });
         //Uri del Cont Prov para recoger calendarios
-        Uri uri = CalendarContract.Calendars.CONTENT_URI;
+       /* Uri uri = CalendarContract.Calendars.CONTENT_URI;
 
         Cursor cursor = getContentResolver().query(uri, null, null, null, null);
 
@@ -69,7 +71,7 @@ public class MainActivity extends Activity {
                 Log.e("titulo:", ""+t+ " "+tit);
                 Log.e("descripcion:", ""+d+ " "+des);
             }
-        }
+        }*/
     }
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo){
         super.onCreateContextMenu(menu, v, menuInfo);
@@ -80,7 +82,6 @@ public class MainActivity extends Activity {
     public boolean onContextItemSelected(MenuItem item){
         switch (item.getItemId()){
             case R.id.crear:
-                //Toast.makeText(getApplicationContext(),""+mes, Toast.LENGTH_LONG).show();
                 Intent intent= new Intent(getApplicationContext(),CrearEvento.class);
                 Bundle b = new Bundle();
                 b.putInt("Dia", dia);
@@ -88,8 +89,6 @@ public class MainActivity extends Activity {
                 b.putInt("Any",any);
                 intent.putExtras(b);
                 startActivity(intent);
-
-
                 break;
             case R.id.mostrar:
                 Intent intent1= new Intent(getApplicationContext(),MostrarEvento.class);
@@ -100,7 +99,6 @@ public class MainActivity extends Activity {
                 intent1.putExtras(b1);
                 startActivity(intent1);
                 break;
-
         }
         return true;
     }

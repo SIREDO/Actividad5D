@@ -12,5 +12,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:nestedScrollingEnabled="false"
-        android:weekSeparatorLineColor="#c43cff" />
+        android:weekSeparatorLineColor="#c43cff"
+        android:background="#dacaff" />
 </RelativeLayout>
